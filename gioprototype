@@ -1,0 +1,751 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ITVERSE | BSIT Student Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            IT<span>VERSE</span>
+        </div>
+
+        <button class="icon-btn">🔔</button>
+    </header>
+
+
+    <!-- HOME -->
+    <section id="home" class="screen active">
+
+        <div class="welcome">
+            <h2>Hi, BSIT Student! 👋</h2>
+            <p>Learn. Play. Plan. Level Up.</p>
+        </div>
+
+        <div class="level-card">
+
+            <div class="level-top">
+                <span>LEVEL 08</span>
+                <strong>1,250 XP</strong>
+            </div>
+
+            <h2>IT Explorer</h2>
+
+            <div class="progress">
+                <div class="progress-bar"></div>
+            </div>
+
+            <small>750 XP until Level 09</small>
+
+        </div>
+
+
+        <!-- TODAY -->
+        <div class="section-title">
+            <h3>📅 Today's Schedule</h3>
+
+            <button onclick="showScreen('schedule')">
+                View All
+            </button>
+        </div>
+
+        <div class="today-card">
+
+            <div class="today-time">
+                08:00 AM – 10:00 AM
+            </div>
+
+            <strong>
+                💻 Computer Programming 1
+            </strong>
+
+            <div class="today-room">
+                📍 Laboratory 2
+            </div>
+
+        </div>
+
+
+        <div class="today-card">
+
+            <div class="today-time">
+                10:30 AM – 12:00 PM
+            </div>
+
+            <strong>
+                🌐 Computer Networking
+            </strong>
+
+            <div class="today-room">
+                📍 Room 204
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+        <div class="section-title">
+            <h3>⚡ Quick Actions</h3>
+        </div>
+
+        <div class="quick-grid">
+
+            <div class="quick" onclick="showScreen('games')">
+                <div class="quick-icon">🎮</div>
+                <h4>Play Games</h4>
+                <p>Practice IT skills</p>
+            </div>
+
+            <div class="quick" onclick="showScreen('schedule')">
+                <div class="quick-icon">📅</div>
+                <h4>Schedule</h4>
+                <p>Manage classes</p>
+            </div>
+
+            <div class="quick" onclick="showScreen('tasks')">
+                <div class="quick-icon">✅</div>
+                <h4>My Tasks</h4>
+                <p>Track assignments</p>
+            </div>
+
+            <div class="quick" onclick="showScreen('profile')">
+                <div class="quick-icon">🏆</div>
+                <h4>Progress</h4>
+                <p>Achievements</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAMES -->
+    <section id="games" class="screen">
+
+        <div class="section-title">
+            <h2>🎮 IT Games</h2>
+        </div>
+
+
+        <div class="game-card" onclick="startQuiz()">
+
+            <div class="game-icon">💻</div>
+
+            <h3>Code Breaker</h3>
+
+            <p>
+                Test your C++ programming knowledge.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🐛</div>
+
+            <h3>Debug It</h3>
+
+            <p>
+                Find errors in programming code.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🌐</div>
+
+            <h3>Network Builder</h3>
+
+            <p>
+                Connect devices and build networks.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🔐</div>
+
+            <h3>Phishing Detective</h3>
+
+            <p>
+                Identify suspicious messages.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🗄️</div>
+
+            <h3>SQL Builder</h3>
+
+            <p>
+                Practice database queries.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+
+        <div class="game-card">
+
+            <div class="game-icon">🖥️</div>
+
+            <h3>Build A PC</h3>
+
+            <p>
+                Learn computer hardware components.
+            </p>
+
+            <button class="play">
+                PLAY →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCHEDULE -->
+    <section id="schedule" class="screen">
+
+        <div class="section-title">
+            <h2>📅 My Schedule</h2>
+        </div>
+
+        <p class="muted">
+            September 2026
+        </p>
+
+
+        <div class="calendar">
+
+            <div class="day">MON</div>
+            <div class="day">TUE</div>
+            <div class="day">WED</div>
+            <div class="day">THU</div>
+            <div class="day">FRI</div>
+            <div class="day">SAT</div>
+            <div class="day">SUN</div>
+
+            <div class="date">21</div>
+            <div class="date">22</div>
+            <div class="date selected">23</div>
+            <div class="date">24</div>
+            <div class="date">25</div>
+            <div class="date">26</div>
+            <div class="date">27</div>
+
+        </div>
+
+
+        <div class="section-title">
+            <h3>
+                Wednesday, September 23
+            </h3>
+        </div>
+
+
+        <div id="events">
+
+            <div class="event">
+
+                <div class="event-time">
+                    08:00 AM – 10:00 AM
+                </div>
+
+                <div class="event-title">
+                    💻 Computer Programming 1
+                </div>
+
+                <div class="event-info">
+                    📍 Laboratory 2
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="event-time">
+                    10:30 AM – 12:00 PM
+                </div>
+
+                <div class="event-title">
+                    🌐 Computer Networking
+                </div>
+
+                <div class="event-info">
+                    📍 Room 204
+                </div>
+
+            </div>
+
+
+            <div class="event">
+
+                <div class="event-time">
+                    01:00 PM – 03:00 PM
+                </div>
+
+                <div class="event-title">
+                    🎨 Human Computer Interaction
+                </div>
+
+                <div class="event-info">
+                    📍 Room 301
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="floating"
+            onclick="openScheduleModal()">
+            +
+        </button>
+
+    </section>
+
+
+    <!-- TASKS -->
+    <section id="tasks" class="screen">
+
+        <div class="section-title">
+            <h2>✅ My Tasks</h2>
+        </div>
+
+
+        <div class="task">
+
+            <div
+                class="check"
+                onclick="completeTask(this)">
+            </div>
+
+            <div class="task-info">
+
+                <strong>
+                    C++ Laboratory #5
+                </strong>
+
+                <p>
+                    Due today • 11:59 PM
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="task">
+
+            <div
+                class="check"
+                onclick="completeTask(this)">
+            </div>
+
+            <div class="task-info">
+
+                <strong>
+                    HCI Mobile Prototype
+                </strong>
+
+                <p>
+                    Due September 23
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="task">
+
+            <div
+                class="check"
+                onclick="completeTask(this)">
+            </div>
+
+            <div class="task-info">
+
+                <strong>
+                    Networking Reviewer
+                </strong>
+
+                <p>
+                    Due September 25
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="task">
+
+            <div
+                class="check"
+                onclick="completeTask(this)">
+            </div>
+
+            <div class="task-info">
+
+                <strong>
+                    Research Paper
+                </strong>
+
+                <p>
+                    Due September 28
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROFILE -->
+    <section id="profile" class="screen">
+
+        <div class="profile">
+
+            <div class="avatar">
+                👨‍💻
+            </div>
+
+            <h2>
+                ITVERSE
+            </h2>
+
+            <p class="muted">
+                BSIT Student Hub
+            </p>
+
+            <div class="developers">
+                Developed by
+                <br>
+                <strong>
+                    Gonzales • Rapay • Barlas
+                </strong>
+            </div>
+
+
+            <div class="stat-grid">
+
+                <div class="stat">
+                    <strong>1,250</strong>
+                    <p>XP</p>
+                </div>
+
+                <div class="stat">
+                    <strong>08</strong>
+                    <p>LEVEL</p>
+                </div>
+
+                <div class="stat">
+                    <strong>7 🔥</strong>
+                    <p>STREAK</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="section-title">
+            <h3>🏅 Achievements</h3>
+        </div>
+
+
+        <div class="game-card">
+
+            🏅 <strong>
+                First Code
+            </strong>
+
+            <p>
+                Completed your first programming challenge.
+            </p>
+
+        </div>
+
+
+        <div class="game-card">
+
+            🐛 <strong>
+                Bug Hunter
+            </strong>
+
+            <p>
+                Found 20 programming errors.
+            </p>
+
+        </div>
+
+
+        <div class="game-card">
+
+            🔐 <strong>
+                Cyber Guard
+            </strong>
+
+            <p>
+                Completed cybersecurity challenges.
+            </p>
+
+        </div>
+
+
+        <div class="about-card">
+
+            <h3>
+                ℹ️ About ITVERSE
+            </h3>
+
+            <p>
+                ITVERSE is a gamified student planner
+                and learning hub designed for BSIT
+                students.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Developers:</strong><br>
+                Gonzales<br>
+                Rapay<br>
+                Barlas
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Course:</strong><br>
+                Bachelor of Science in Information Technology
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Project:</strong><br>
+                Human-Computer Interaction Final Project
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen">
+
+        <div class="section-title">
+            <h2>💻 Code Breaker</h2>
+        </div>
+
+
+        <div class="quiz">
+
+            <div class="question-number">
+                QUESTION 1 OF 5
+            </div>
+
+
+            <div class="question">
+
+                What will this C++ code output?
+
+                <br><br>
+
+                <code>
+                    int x = 10;<br>
+                    int y = 5;<br>
+                    cout &lt;&lt; x + y;
+                </code>
+
+            </div>
+
+
+            <button
+                class="answer"
+                onclick="answer(false)">
+                A. 50
+            </button>
+
+
+            <button
+                class="answer"
+                onclick="answer(true)">
+                B. 15
+            </button>
+
+
+            <button
+                class="answer"
+                onclick="answer(false)">
+                C. 105
+            </button>
+
+
+            <button
+                class="answer"
+                onclick="answer(false)">
+                D. Error
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- NAVIGATION -->
+    <nav class="bottom-nav">
+
+        <button
+            class="nav-btn active"
+            onclick="showScreen('home',this)">
+            <span>🏠</span>
+            Home
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="showScreen('games',this)">
+            <span>🎮</span>
+            Games
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="showScreen('schedule',this)">
+            <span>📅</span>
+            Schedule
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="showScreen('tasks',this)">
+            <span>✅</span>
+            Tasks
+        </button>
+
+        <button
+            class="nav-btn"
+            onclick="showScreen('profile',this)">
+            <span>👤</span>
+            Profile
+        </button>
+
+    </nav>
+
+</div>
+
+
+<!-- ADD SCHEDULE MODAL -->
+
+<div
+    class="modal"
+    id="scheduleModal">
+
+    <div class="modal-box">
+
+        <h2>
+            ➕ Add Schedule
+        </h2>
+
+        <input
+            id="subject"
+            placeholder="Subject">
+
+        <input
+            id="time"
+            placeholder="Time e.g. 8:00 AM">
+
+        <input
+            id="room"
+            placeholder="Room / Location">
+
+
+        <select id="type">
+
+            <option>
+                Class
+            </option>
+
+            <option>
+                Exam
+            </option>
+
+            <option>
+                Activity
+            </option>
+
+            <option>
+                Assignment
+            </option>
+
+        </select>
+
+
+        <button
+            class="save-btn"
+            onclick="saveSchedule()">
+            SAVE SCHEDULE
+        </button>
+
+
+        <button
+            class="close-btn"
+            onclick="closeScheduleModal()">
+            CANCEL
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
